@@ -1,0 +1,9 @@
+#VENV
+/myvenv1
+
+# VSCode 
+.vscode/
+
+# pycache
+__pycache__/
+*.pyc
