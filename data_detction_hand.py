@@ -35,7 +35,7 @@ while True:
         print(f"錄製手勢: {label}")
     elif k == ord('s'):
         df = pd.DataFrame(data)
-        df.to_csv(f"number_0-9.csv", index=False, header=False)
+        df.to_csv(f"number_0-9.csv",mode='a', index=False, header=False)
         print(f"✅ 已將{label}儲存至csv檔")
     elif k==ord('h'): # h: happy
         label = chr(k)
