@@ -37,10 +37,10 @@ while True:
         df = pd.DataFrame(data)
         df.to_csv(f"number_0-9.csv", index=False, header=False)
         print(f"✅ 已將{label}儲存至csv檔")
-    elif ord('h'): # h: happy
+    elif k==ord('h'): # h: happy
         label = chr(k)
         print(f"錄製手勢: happy")
-    elif ord('f'): #f: find
+    elif k==ord('f'): #f: find
         label = chr(k)
         print(f"錄製手勢: find") 
     elif k == ord('q'):
