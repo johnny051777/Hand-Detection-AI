@@ -37,12 +37,21 @@ while True:
         df = pd.DataFrame(data)
         df.to_csv(f"number_0-9.csv",mode='a', index=False, header=False)
         print(f"✅ 已將{label}儲存至csv檔")
-    elif k==ord('h'): # h: happy
+    elif k==ord('h'): # h: hello
         label = chr(k)
-        print(f"錄製手勢: happy")
+        print(f"錄製手勢: hello")
+    elif k==ord('w'): #w: world
+        label = chr(k)
+        print(f"錄製手勢: world")
+    elif k==ord('i'):#i : I
+        label = chr(k)
+        print(f"錄製手勢: I")
     elif k==ord('f'): #f: find
         label = chr(k)
-        print(f"錄製手勢: find") 
+        print(f"錄製手勢: find")
+    elif k==ord('p'): #p: iphone
+        label = chr(k)
+        print(f"錄製手勢: iphone")
     elif k == ord('q'):
         break
 
