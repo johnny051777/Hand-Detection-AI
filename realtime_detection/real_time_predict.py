@@ -4,7 +4,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 # 讀取模型與標準化參數
-model = load_model("hand_sign_model.h5")
+model = load_model(r"C:\AI_Hand_Project\model\hand_sign_model_add4word.h5")
 mean = np.load("scaler_mean.npy")
 scale = np.load("scaler_scale.npy")
 
@@ -15,6 +15,23 @@ hands = mp_hands.Hands(max_num_hands=1)
 
 # 攝影機初始化
 cap = cv2.VideoCapture(0)
+
+label_map={
+    0: "0",
+    1: "1",
+    2: "2",
+    3: "3",
+    4: "4",
+    5: "5",
+    6: "6",
+    7: "7",
+    8: "8",
+    9: "9",
+    10: "find",
+    11: "hello",
+    12: "i",
+    13: "phone"
+}
 
 print("🚀 啟動即時手語辨識，按 q 離開")
 
@@ -43,7 +60,8 @@ while True:
                 confidence = prediction[0][predicted_class]
 
                 # 顯示預測結果
-                text = f" LSTM Predict: {predicted_class} ({confidence*100:.1f}%)"
+                label_txt=  label_map.get(predicted_class, str(predicted_class))
+                text = f" LSTM Predict: {label_txt} ({confidence*100:.1f}%)"
                 cv2.putText(frame, text, (10, 40),
                             cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 

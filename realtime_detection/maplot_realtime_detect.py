@@ -7,7 +7,7 @@ from io import BytesIO
 from PIL import Image
 
 # 讀取模型與標準化參數
-model = load_model(r"C:\AI_Hand_Project\model\hand_sign_model.h5")
+model = load_model(r"C:\AI_Hand_Project\hand_sign_model_add4word.h5")
 mean = np.load("scaler_mean.npy")
 scale = np.load("scaler_scale.npy")
 

@@ -35,14 +35,20 @@ while True:
         print(f"錄製手勢: {label}")
     elif k == ord('s'):
         df = pd.DataFrame(data)
-        df.to_csv(f"number_0-9.csv",mode='a', index=False, header=False)
+        df.to_csv(r"C:\AI_Hand_Project\dataset_csv\number0-9.csv",mode='a', index=False, header=False)
         print(f"✅ 已將{label}儲存至csv檔")
-    elif k==ord('h'): # h: happy
+    elif k==ord('h'): # h: hello
         label = chr(k)
         print(f"錄製手勢: happy")
     elif k==ord('f'): #f: find
         label = chr(k)
         print(f"錄製手勢: find") 
+    elif k==ord('i'): #f: i
+        label = chr(k)
+        print(f"錄製手勢: i") 
+    elif k==ord('p'): #p: phone
+        label = chr(k)
+        print(f"錄製手勢: phone") 
     elif k == ord('q'):
         break
 
