@@ -4,7 +4,7 @@
 - `data_detction_hand.py`: 自動偵測手勢，輸入想要偵測的數字，把手勢的keypoint傳到CSV檔案
 
 ## 模型訓練
-- `train_hand_model.py`: 基於LSTM訓練手勢模型，Dataset來自CSV檔案
+- `train_hand_model.py`: 基於MLP訓練手勢模型，Dataset來自CSV檔案
 
 ## REAL-TIME 偵測
 - `real_time_predict.py`: REAL-TIME即時辨識手勢
